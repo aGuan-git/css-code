@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="单行和多行文本超出省略号.css">
-</head>
-
-<body>
+/* 
   <div class="text1">
     夫君子之行，静以修身，俭以养德。非淡泊无以明志，非宁静无以致远。夫学须静也，才须学也，非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能治性。年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！
   </div>
   <div class="text2">
     夫君子之行，静以修身，俭以养德。非淡泊无以明志，非宁静无以致远。夫学须静也，才须学也，非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能治性。年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！
   </div>
-</body>
+*/
 
-</html>
+/* 单行文本出现省略号 */
+.text1 {
+  width: 200px; 
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden;
+  /* clip 剪裁 */
+  text-overflow: ellipsis;
+}
+
+.text2 {
+  width: 200px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* 移动端 */
+  text-overflow: ellipsis;
+  /* 英文强制换行 */
+  word-break: break-all;
+}
